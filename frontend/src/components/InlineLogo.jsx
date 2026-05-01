@@ -1,0 +1,32 @@
+export default function InlineLogo({ size = 48, className = '' }) {
+  return (
+    <svg
+      role="img"
+      aria-label="JoJo logo"
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <defs>
+        <linearGradient id="jojoGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#F25E86" />
+          <stop offset="100%" stopColor="#BF2A70" />
+        </linearGradient>
+      </defs>
+      <polygon
+        points="32,2 62,32 32,62 2,32"
+        fill="url(#jojoGrad)"
+        stroke="#BF2A70"
+        strokeWidth="2"
+      />
+      <polygon
+        points="32,14 38,28 52,30 41,40 44,54 32,46 20,54 23,40 12,30 26,28"
+        fill="#FFFFFF"
+        opacity="0.95"
+      />
+      <circle cx="32" cy="34" r="3" fill="#8DD5F2" />
+    </svg>
+  )
+}

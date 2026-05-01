@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jojo-pink: #F25E86;
+  --color-jojo-magenta: #BF2A70;
+  --color-jojo-blue: #8DD5F2;
+  --color-jojo-green: #AED98F;
+  --color-jojo-gray: #E3E1E0;
+}
+
+:root {
+  --color-accion: var(--color-jojo-pink);
+  --color-accion-hover: var(--color-jojo-magenta);
+  --color-borde: var(--color-jojo-gray);
+  --color-exito: var(--color-jojo-green);
+  --color-info: var(--color-jojo-blue);
+  --color-error: var(--color-jojo-magenta);
+  --color-texto: #1a1a1a;
+  --color-texto-suave: #6b7280;
+  --color-fondo: #ffffff;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes jojo-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.jojo__logo--pulse {
+  animation: jojo-pulse 2.5s ease-in-out infinite;
+}
+
+dialog::backdrop {
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(2px);
+}
